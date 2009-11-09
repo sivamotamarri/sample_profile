@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+account:
+  id: 1
+  user_name: siva
+  password_salt: "354944000.235396543653306"
+  password_hash: "58e62827a5beac6c9ea5305da22587a94d433881"
+
+# one:
+#   column: value
+#
+# two:
+#   column: value

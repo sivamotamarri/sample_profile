@@ -1,0 +1,24 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+ one:
+   id: 1
+   full_name: Siva Krishna
+   address: Kallam
+   city: Kakinada
+   province: Kaka Street
+   country: India
+   postal_code: 533345
+   picture: mail.jpg
+   account_id: 1
+   myname: siva-krishna
+ two:
+   id: 2
+   full_name: Krishna
+   address: Kallam
+   city: Kakinada
+   province: Kaka Street
+   country: India
+   postal_code: 533345
+   picture: mail.jpg
+   account_id: 2
+   myname: krishna
