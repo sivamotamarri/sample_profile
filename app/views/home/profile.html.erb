@@ -1,0 +1,106 @@
+
+<div style="width:1000px;">
+
+
+ <div style="height:10px;"></div>
+ 
+ 
+ <div style="float:left;width:500px;  border:#CCCCCC solid 2px;">
+<div style="float:left;width:500px; height:20px;  background-color:#94B5D7;"><div style="padding-left:20px; color:#FFFFFF;"><b>Create Or Edit Your Profile <%=  @account.user_name %></b></div></div> 
+
+<div style="float:left;width:500px; padding-left:10px;">
+ <div style="height:30px;"></div>
+<% form_for 'user', :url => {:controller => 'home', :action => 'create', :id=>@account.id} , :html => {:multipart => true} do %>
+
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;padding-left:10px;">Full Name </div> 
+<div style="width:5px; float:left;">:</div>
+<div style="width:200px; float:left;"><%= text_field 'user','full_name' %></div>
+</div>
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;padding-left:10px;">&nbsp;</div> 
+<div style="width:5px; float:left;">&nbsp;</div>
+<div style="width:200px; float:left;"><%= error_message_on :user, :full_name,"* Full Name " %></div>
+</div>
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;  padding-left:10px;">Address </div> 
+<div style="width:5px; float:left;">:</div>
+<div style="width:200px; float:left;"><%= text_area 'user','address', :rows=> 5 , :cols => 23 %></div>
+</div>
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;  padding-left:10px;">&nbsp;</div> 
+<div style="width:5px; float:left;">&nbsp;</div>
+<div style="width:200px; float:left;"><%= error_message_on :user, :address,"* Address " %></div>
+</div>
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;padding-left:10px;">City </div> 
+<div style="width:5px; float:left;">:</div>
+<div style="width:200px; float:left;"><%= text_field 'user','city' %></div>
+</div>
+
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;padding-left:10px;">Province </div> 
+<div style="width:5px; float:left;">:</div>
+<div style="width:200px; float:left;"><%= text_field 'user','province' %></div>
+</div>
+
+
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;padding-left:10px;">Country </div> 
+<div style="width:5px; float:left;">:</div>
+<div style="width:200px; float:left;"><%= text_field 'user','country' %></div>
+</div>
+
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;padding-left:10px;">Postal Code </div> 
+<div style="width:5px; float:left;">:</div>
+<div style="width:200px; float:left;"><%= text_field 'user','postal_code' %></div>
+</div>
+
+
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;padding-left:10px;">Upload Picture </div> 
+<div style="width:5px; float:left;">:</div>
+<div style="width:200px; float:left;"><%= file_column_field 'user', 'picture' %></div>
+</div>
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;  padding-left:10px;">&nbsp;</div> 
+<div style="width:5px; float:left;">&nbsp;</div>
+<div style="width:200px; float:left;"><%= error_message_on :user, :picture,"*Picture " %></div>
+</div>
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;padding-left:10px;">&nbsp; </div> 
+<div style="width:5px; float:left;"></div>
+<div style="width:200px; float:left;"><input type="hidden" name="user[account_id]" value="<%= @account.id %>" /></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="height:30px;"> &nbsp;</div>
+<div style="float:left;width:500px; padding-left:10px;">
+<div style="float:left;width:100px;  padding-left:10px;">&nbsp;</div>
+<div style="width:200px; float:left;"><input type="image" src="/images/submit.jpg" /> <%= link_to image_tag("/images/s_cancel.jpg", :style => 'border:none;'), { :controller =>'home'} %></div>
+<div style="width:5px; float:left;">&nbsp;</div>
+</div>
+<% end %>
+ </div>
+ 
+ 
+ </div>
+ 
+ <div style="float:left;width:300px; height:20px; padding-left:10px;"></div>
+ </div>
+
+
+
+				
